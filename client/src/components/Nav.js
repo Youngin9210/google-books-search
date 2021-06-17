@@ -17,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		flexGrow: 1,
 	},
+	navBrand: {
+		marginRight: '1rem',
+		textDecoration: 'none',
+		color: 'inherit',
+	},
 	link: {
 		marginLeft: '.75rem',
 		textDecoration: 'none',
@@ -31,7 +36,7 @@ export default function Nav() {
 			<AppBar position="static" color="secondary">
 				<Toolbar>
 					<Typography variant="h6" className={classes.title}>
-						<Link to="/" className={classes.link}>
+						<Link to="/" className={classes.navBrand}>
 							Google Books Search
 						</Link>
 						<Typography variant="subtitle1" component="span">
