@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -16,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		flexGrow: 1,
 	},
+	link: {
+		marginLeft: '.75rem',
+		textDecoration: 'none',
+		color: 'inherit',
+	},
 }));
 
 export default function Nav() {
@@ -25,10 +31,17 @@ export default function Nav() {
 			<AppBar position="static" color="secondary">
 				<Toolbar>
 					<Typography variant="h6" className={classes.title}>
-						Google Books Search
-					</Typography>
-					<Typography variant=''>
-
+						<Link to="/" className={classes.link}>
+							Google Books Search
+						</Link>
+						<Typography variant="subtitle1" component="span">
+							<Link to="/search" className={classes.link}>
+								Search
+							</Link>
+							<Link to="/saved" className={classes.link}>
+								Saved
+							</Link>
+						</Typography>
 					</Typography>
 					<IconButton
 						edge="start"
