@@ -4,11 +4,11 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
 	headerContainer: {
-		padding: '2rem 0',
+		padding: '4rem 0',
 		width: '100%',
 		textAlign: 'center',
 		background: 'lightgrey',
-		margin: '2rem 0',
+		// margin: '2rem 0',
 	},
 	h6: {
 		fontSize: '1.75rem',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	searchContainer: {
 		padding: '2rem',
-		background: 'lightgrey',
+		// background: 'lightgrey',
 		color: 'black',
 		display: 'flex',
 		flexWrap: 'wrap',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	resultsContainer: {
 		padding: '2rem',
-		background: 'lightgrey',
+		// background: 'lightgrey',
 		color: 'black',
 		display: 'flex',
 		flexWrap: 'wrap',
