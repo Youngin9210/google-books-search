@@ -27,6 +27,9 @@ export default function Nav() {
 					<Typography variant="h6" className={classes.title}>
 						Google Books Search
 					</Typography>
+					<Typography variant=''>
+
+					</Typography>
 					<IconButton
 						edge="start"
 						className={classes.menuButton}
