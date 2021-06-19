@@ -1,11 +1,11 @@
-import { Button, Container, Typography } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import React from 'react';
 
 export default function ResultsContainer({ classes }) {
 	return (
 		<div className={classes.resultsContainer}>
 			<Typography variant="h5">Results</Typography>
-			<Container className={classes.bookContainer}>
+			<div className={classes.bookContainer}>
 				<div className={classes.bookHeader}>
 					<div>
 						<Typography variant="h5">Book Title</Typography>
@@ -52,7 +52,7 @@ export default function ResultsContainer({ classes }) {
 						</Typography>
 					</div>
 				</div>
-			</Container>
+			</div>
 		</div>
 	);
 }
