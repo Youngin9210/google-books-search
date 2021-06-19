@@ -50,8 +50,8 @@ const useStyles = makeStyles(() => ({
 		// background: 'lightgrey',
 		color: 'black',
 		display: 'flex',
-		flexWrap: 'wrap',
 		margin: '2rem 0',
+		flexDirection: 'column',
 	},
 	resultButton: {
 		margin: '.25rem',
@@ -59,7 +59,8 @@ const useStyles = makeStyles(() => ({
 	bookContainer: {
 		border: '1px solid black',
 		padding: '1rem',
-		margin: '1rem 0',
+		margin: '1rem',
+		// width: '100%',
 	},
 	bookHeader: {
 		display: 'flex',
