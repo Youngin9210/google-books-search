@@ -14,6 +14,11 @@ export default function BookCard({
 	handleDelete,
 	currentPage,
 }) {
+	const handleClick = (bookId) => {
+		console.log(bookId);
+		currentPage === 'search' && handleSave(bookId);
+		currentPage === 'saved' && handleDelete(bookId);
+	};
 	return (
 		<div className={classes.bookContainer}>
 			<div className={classes.bookHeader}>
@@ -40,9 +45,7 @@ export default function BookCard({
 						color="secondary"
 						className={classes.resultButton}
 						id={id}
-						onClick={() =>
-							currentPage === 'search' ? handleSave(id) : handleDelete(id)
-						}
+						onClick={() => handleClick(id)}
 					>
 						{currentPage === 'search' ? 'Save' : 'Delete'}
 					</Button>
