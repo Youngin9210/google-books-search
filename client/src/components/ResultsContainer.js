@@ -1,20 +1,29 @@
 import { Typography } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BookCard from './BookCard';
 
 export default function ResultsContainer({
 	classes,
 	results,
 	handleSave,
-	currentPage,
 	handleDelete,
 }) {
+	const [currentPage, setCurrentPage] = useState('');
+	useEffect(() => {
+		window.location.pathname === '/'
+			? setCurrentPage('search')
+			: setCurrentPage('saved');
+		console.log(currentPage);
+		return;
+	}, [currentPage]);
+
 	return (
 		<div className={classes.resultsContainer}>
 			<Typography variant="h5">
 				{window.location.pathname === '/saved' ? 'Saved Books' : 'Results'}
 			</Typography>
 			{results.map((book) => {
+				const { id } = book;
 				const { _id } = book;
 				const {
 					title,
@@ -26,8 +35,8 @@ export default function ResultsContainer({
 				} = book.volumeInfo;
 				return (
 					<BookCard
-						id={_id}
-						key={_id}
+						id={currentPage === 'search' ? id : _id}
+						key={currentPage === 'search' ? id : _id}
 						title={title}
 						publishedDate={publishedDate}
 						description={description}
