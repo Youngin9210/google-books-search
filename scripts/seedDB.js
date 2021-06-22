@@ -7,7 +7,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks');
 
 const bookSeed = [
 	{
-		_id: 'HksgDQAAQBAJ',
+		id: 'HksgDQAAQBAJ',
 		volumeInfo: {
 			title: "Harry Potter and the Philosopher's Stone",
 			authors: ['J. K. Rowling'],
@@ -24,7 +24,7 @@ const bookSeed = [
 		},
 	},
 	{
-		_id: 'L2EQuwEACAAJ',
+		id: 'L2EQuwEACAAJ',
 		volumeInfo: {
 			title: 'Harry Potter and the Half-Blood Prince',
 			authors: ['J. K. Rowling'],
@@ -40,7 +40,7 @@ const bookSeed = [
 		},
 	},
 	{
-		_id: 'axkVPwAACAAJ',
+		id: 'axkVPwAACAAJ',
 		volumeInfo: {
 			title: "Frightful's Mountain",
 			authors: ['Jean Craighead George'],
