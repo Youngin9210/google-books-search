@@ -3,7 +3,7 @@ import useStyles from '../assets/useStyles';
 import ResultsContainer from '../components/ResultsContainer';
 import API from '../utils/API';
 
-export default function Saved({ currentPage }) {
+export default function Saved() {
 	const [savedBooks, setSavedBooks] = useState([]);
 	useEffect(() => {
 		getBooks();
@@ -18,7 +18,9 @@ export default function Saved({ currentPage }) {
 
 	const handleDelete = (bookId) => {
 		console.log('bookId:', bookId);
-		API.deleteBook(bookId).then(() => console.log('deleted'));
+		API.deleteBook(bookId).then(() =>
+			setSavedBooks(savedBooks.filter((book) => book._id !== bookId))
+		);
 	};
 
 	const classes = useStyles();
@@ -27,7 +29,6 @@ export default function Saved({ currentPage }) {
 			<ResultsContainer
 				classes={classes}
 				results={savedBooks}
-				currentPage={currentPage}
 				handleDelete={handleDelete}
 			/>
 		</>
