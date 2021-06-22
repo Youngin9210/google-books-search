@@ -4,7 +4,7 @@ import ResultsContainer from '../components/ResultsContainer';
 import SearchBox from '../components/SearchBox';
 import API from '../utils/API';
 
-export default function Search({ currentPage }) {
+export default function Search() {
 	const [searchResults, setSearchResults] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 
@@ -37,7 +37,7 @@ export default function Search({ currentPage }) {
 		searchResults.map((book) => {
 			if (book.id === bookId) {
 				let bookData = {
-					_id: book.id,
+					id: book.id,
 					volumeInfo: {
 						title: book.volumeInfo.title,
 						authors: book.volumeInfo.authors,
@@ -71,7 +71,6 @@ export default function Search({ currentPage }) {
 					classes={classes}
 					results={searchResults}
 					handleSave={handleSave}
-					currentPage={currentPage}
 				/>
 			)}
 		</>
