@@ -16,7 +16,7 @@ export default function Nav() {
 							Google Books Search
 						</Link>
 						<Typography variant="subtitle1" component="span">
-							<Link to="/search" className={classes.link}>
+							<Link to="/" className={classes.link}>
 								Search
 							</Link>
 							<Link to="/saved" className={classes.link}>
