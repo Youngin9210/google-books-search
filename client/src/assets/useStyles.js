@@ -22,7 +22,6 @@ const useStyles = makeStyles(() => ({
 		width: '100%',
 		textAlign: 'center',
 		background: 'lightgrey',
-		// margin: '2rem 0',
 	},
 	h6: {
 		fontSize: '1.75rem',
@@ -33,11 +32,10 @@ const useStyles = makeStyles(() => ({
 	},
 	searchContainer: {
 		padding: '2rem',
-		// background: 'lightgrey',
 		color: 'black',
 		display: 'flex',
 		flexWrap: 'wrap',
-		margin: '2rem 0',
+		margin: '1rem 0',
 	},
 	searchInput: {
 		margin: '1.5rem 0',
@@ -47,10 +45,9 @@ const useStyles = makeStyles(() => ({
 	},
 	resultsContainer: {
 		padding: '2rem',
-		// background: 'lightgrey',
 		color: 'black',
 		display: 'flex',
-		margin: '2rem 0',
+		margin: '1rem 0',
 		flexDirection: 'column',
 	},
 	resultButton: {
@@ -69,7 +66,6 @@ const useStyles = makeStyles(() => ({
 	},
 	bookDetails: {
 		display: 'flex',
-		justifyContent: 'space-between',
 		alignItems: 'center',
 	},
 	bookSummary: {
