@@ -1,15 +1,11 @@
 import axios from 'axios';
 const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const API_PARAMS = '&langRestrict=en&orderBy=relevance&printType=BOOKS';
-// const API_URL = process.env.REACT_APP_API_URL;
-// const API_PARAMS = process.env.REACT_APP_API_PARAMS;
-// const API_KEY = process.env.REACT_APP_API_KEY;
-const API_KEY = '&key=AIzaSyC89aAhPWHbfl6UDBgwwOzd5vpKWE-ySyE';
 
 export default {
 	// get a list of books from search
 	searchBooks: function (query) {
-		return axios.get(API_URL + query + API_PARAMS + API_KEY);
+		return axios.get(API_URL + query + API_PARAMS);
 	},
 	// Gets all saved books
 	getSavedBooks: function () {
