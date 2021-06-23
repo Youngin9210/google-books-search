@@ -1,6 +1,6 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
@@ -57,16 +57,24 @@ const useStyles = makeStyles(() => ({
 		border: '1px solid black',
 		padding: '1rem',
 		margin: '1rem',
-		// width: '100%',
 	},
 	bookHeader: {
 		display: 'flex',
 		justifyContent: 'space-between',
 		marginBottom: '1rem',
+		[theme.breakpoints.down('md')]: {
+			flexDirection: 'column',
+			justifyContent: 'center',
+			textAlign: 'center'
+		},
 	},
 	bookDetails: {
 		display: 'flex',
 		alignItems: 'center',
+		[theme.breakpoints.down('md')]: {
+			flexWrap: 'wrap',
+			justifyContent: 'center'
+		},
 	},
 	bookSummary: {
 		padding: '1rem',
